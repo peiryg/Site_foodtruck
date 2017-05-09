@@ -26,8 +26,8 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>               
-                        <li> <a href="commandes.php"><span class="glyphicon glyphicon-shopping-cart"></span> Commander</a></li>
+                        <li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>               
+                        <li class="active"> <a href="commandes.php"><span class="	glyphicon glyphicon-shopping-cart"></span> Commander</a></li>
                     </ul>
                 </div>
             </div>
