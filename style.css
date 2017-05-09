@@ -16,3 +16,15 @@ footer{
     background-color: white;
     height: 100px;
 }
+.commande{
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    margin: 10px;
+}
+.titreCommande{
+    margin: 2px;
+}
