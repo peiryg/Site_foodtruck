@@ -7,8 +7,8 @@
     top: 50px;
     width: 100%;
     height: auto;
-    background-color: #323233;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px;
     text-align: justify;
 }
@@ -18,10 +18,10 @@ footer{
 }
 .commande{
     padding: 5px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 5px;
-    box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     margin: 10px;
 }
