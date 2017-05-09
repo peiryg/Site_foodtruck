@@ -20,7 +20,7 @@
                     </button>
                     <p>
                         <a href="index.php">
-                            <img class="navbar-brand" src="img/logo.jpg" alt="Logo">
+                            <img style="width:60px;height:45px;margin-top:5px;" class="navbar-brand" src="img/logo.png" alt="Logo">
                         </a>
                     </p>
                 </div>
