@@ -14,34 +14,59 @@
     <body>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="drinkModal" tabindex="-1" role="dialog" aria-labelledby="drinkModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h1  class="titre" style="font-size: 40pt;"> LOS TARDOS</h1>
+                        <h1 style="font-size: 40pt;text-align:center;">Ajouter</h1>
                     </div>
                     <div class="modal-body">
-                        <a href='https://github.com/peiryg/TutoGIT'>Le projet github</a><br><br>
-
-                        <p>
-                            Site crée par : <ul>
-                            <li>Daaqi</li>
-                            <li>KweezWD</li>
-                            <li>Bad Motherfucker</li>
-
-                        </ul>
-                        
-                        
-                        
-                        <p style="font-weight: bold;text-align: right;">
-                            <span class="glyphicon glyphicon-envelope"></span><a href="mailto:supermarl9wp@gmail.com">supermarl9wp@gmail.com</a>
-                        </p>
+                        <form action="#">
+                            <input type="radio" name="boisson" value="coca"> Coca<br>
+                            <input type="radio" name="boisson" value="sprite"> Sprite<br>
+                            <input type="radio" name="boisson" value="fanta"> Fanta<br>
+                            <input type="hidden" id="meal" name="repas" value=""/>
+   <!--                          <input type="text" name="username" placeholder="Nom pour la commande"></input><br><br>
+                           <p>Heure désirée</p>
+                            <select>
+                                <option value="0">12:00 am</option>
+                                <option value="1">1:00 am</option>
+                                <option value="2">2:00 am</option>
+                                <option value="3">3:00 am</option>
+                                <option value="4">4:00 am</option>
+                                <option value="5">5:00 am</option>
+                                <option value="6">6:00 am</option>
+                                <option value="7">7:00 am</option>
+                                <option value="8">8:00 am</option>
+                                <option value="9">9:00 am</option>
+                                <option value="10">10:00 am</option>
+                                <option value="11">11:00 am</option>
+                                <option value="12">12:00 pm</option>
+                                <option value="13">1:00 pm</option>
+                                <option value="14">2:00 pm</option>
+                                <option value="15">3:00 pm</option>
+                                <option value="16">4:00 pm</option>
+                                <option value="17">5:00 pm</option>
+                                <option value="18">6:00 pm</option>
+                                <option value="19">7:00 pm</option>
+                                <option value="20">8:00 pm</option>
+                                <option value="21">9:00 pm</option>
+                                <option value="22">10:00 pm</option>
+                                <option value="23">11:00 pm</option>
+                            </select>-->
+                            <input type="submit" name="confirmer" class="btn" value="Confirmer"></input>
+                        </form>
+                        <?php
+                        if (isset($_POST['confirmer'])) {
+                            
+                        }
+                        ?>
 
                     </div>
                     <div class="modal-footer" style="text-align: center;">
 
-                        &copy Los Tardos Production
+                        &copy Foodriders
 
                     </div>
                 </div>

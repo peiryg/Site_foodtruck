@@ -9,16 +9,29 @@ require 'modal.php';
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Foodriders</title>      
         <!-- Bootstrap -->
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+
+        <<script>
+        $(document).ready(function (){
+            $('#drinkModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) ;// Button that triggered the modal
+                    var choice = button.data('meal'); // Extract info from data-* attributes                    
+                    var modal = $(this);
+                    modal.find('#meal').val(choice);
+                    });
+                });
+
+
+
+        </script>
     </head>
     <body>
         <div class="header">          
@@ -36,7 +49,7 @@ require 'modal.php';
                             <div class="row-menu">
                                 <p class="item-menu">Cheese</p>
                                 <span href="#" class="item-prise">10.-</span>
-                                <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Ajouter</button>
+                                <button class="btn" name="cheese" data-toggle="modal" data-target="#drinkModal" id="addMenu" data-meal="Cheese">Ajouter</button>
                             </div>
                             <span class="red-line"></span>
                         </div>
@@ -44,21 +57,21 @@ require 'modal.php';
                             <div class="row-menu">
                                 <p class="item-menu">Cheese</p>
                                 <span href="#" class="item-prise">10.-</span>
-                                <button class="btn">Ajouter</button>
+                                <button class="btn" data-toggle="modal" data-target="#myModal">Ajouter</button>
                             </div>
                             <span class="red-line"></span>
                         </div><div class="row-menu-wrap">
                             <div class="row-menu">
                                 <p class="item-menu">Cheese</p>
                                 <span href="#" class="item-prise">10.-</span>
-                                <button class="btn">Ajouter</button>
+                                <button class="btn" data-toggle="modal" data-target="#myModal">Ajouter</button>
                             </div>
                             <span class="red-line"></span>
                         </div><div class="row-menu-wrap">
                             <div class="row-menu">
                                 <p class="item-menu">Cheese</p>
                                 <span href="#" class="item-prise">10.-</span>
-                                <button class="btn">Ajouter</button>
+                                <button class="btn" data-toggle="modal" data-target="#myModal">Ajouter</button>
                             </div>
                             <span class="red-line"></span>
                         </div>
