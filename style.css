@@ -1,6 +1,9 @@
 .navbar-brand:hover{
     opacity:0.8;
 }
+.body{
+    margin-left:0px;
+}
 .contenu{
     margin: auto;
     position: relative;
@@ -27,4 +30,101 @@ footer{
 }
 .titreCommande{
     margin: 2px;
+}
+.footer{
+    width:100%;
+    height:10%;
+    background-color: #323233;
+    position:fixed ;
+    bottom:0;
+    color: white;
+    border-top: 2px solid red;
+}
+
+.img_footer{
+    position:relative;
+    display:block;
+    width: 17%;
+    height: 80%;
+    margin: auto;
+    margin-top:2%;
+
+
+}
+.header{
+    width:100%;
+    height:10%;
+    background-color: #323233;
+    position:fixed ;
+    top:0;
+    color: white;
+    border-bottom: 2px solid red;
+    z-index: 1;
+
+}
+
+.img_header{
+    position:relative;
+    display:block;
+    width: 17%;
+    height: 80%;
+    margin: auto;
+    margin-top:2%;
+
+
+
+}
+.container{
+    margin-top:120px;
+}
+.ic-cate{
+    display:inline-block;
+    width:235px;
+    height:27px;
+}
+.row-menu-wrap{
+    display:block;
+    margin-bottom: 35px;
+
+}
+.category-item{
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+    font-size: 36px;
+    color:grey;
+
+}
+.wrap-menu{
+    display:table;
+    width:440px;
+    max-width:440px;
+}
+.item-prise{
+    display:table-cell;
+    font-size:21px;
+    font-family:'yeseva';
+    color:#cc9900;
+}
+.item-menu{
+    display:table-cell;
+    width:90%;
+    font-size:21px;
+    font-family:'yeseva';
+    color:#cc9900;
+}
+.red-line{
+    display:inline-block;
+    width:100%;
+    height:1px;
+    margin-bottom:8px;
+    background-color:red;
+}
+.item-descr{
+    font-size:16px;
+    font-family:'lato';
+}
+.btn{
+  float:right;
+  margin-top:-30px;
 }

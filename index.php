@@ -12,54 +12,53 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-  
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="header">          
+            <img class="img_header" src="img/logo.png" alt=""/>              
+        </div>
+        <div class="body">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span> 
-                    </button>
-                    <p>
-                        <a href="index.php">
-                            <img style="width:60px;height:45px;margin-top:5px;" class="navbar-brand" src="img/logo.png" alt="Logo">
-                        </a>
-                    </p>
+                <div class="col-md-5 left">
+                    <div class="wrap-menu">
+                        <h2 class="category-item">
+                            <span>Hamburgers</span>
+                            <i class="ic-cate"></i>
+                        </h2>
+                        <div class="row-menu-wrap">
+                            <div class="row-menu">
+                                <a href="#" class="item-menu">Cheese</a>
+                                <span href="#" class="item-prise">10.-</span>
+                                <button class="btn">Ajouter</button>
+                            </div>
+                            <span class="red-line"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>               
-                        <li> <a href="commandes.php"><span class="	glyphicon glyphicon-shopping-cart"></span> Commander</a></li>
-                    </ul>
+                <div class="col-md-5 left">
+                    <div class="wrap-menu">
+                        <div class="row-menu-wrap">
+                            <div class="row-menu">
+                                <a href="#" class="item-menu">Tzatsiki</a>
+                                <span href="#" class="item-prise"> &nbsp;&nbsp;10.-</span>
+                            </div>
+                            <span class="red-line"></span>
+                            <span class="item-descr">Refreshing traditional cucumber and garlic yoghurt dip.</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <div class="contenu">
-            <div class="commande">
-                <h2 class="titreCommande">Américain</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="commande">
-                <h2 class="titreCommande">Américain</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="commande">
-                <h2 class="titreCommande">Américain</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="commande">
-                <h2 class="titreCommande">Américain</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
         <footer>
-            Bonsoir
+            <div class="footer">
+                <img class="img_footer" src="img/logo.png" alt=""/>
+                test
+            </div>
+
         </footer>
     </body>
 </html>
