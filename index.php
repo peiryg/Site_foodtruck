@@ -15,8 +15,9 @@ if (isset($_GET['Boisson'])) {
   
   
   $_SESSION['commande'] = $commande;
-     var_dump($commande);
-header('Location: index.php');
+    // var_dump($commande);
+  echo $count;
+header('Location:redirectForCommandes.php');
 } else
 {
     $_GET['Boisson'] = "";
