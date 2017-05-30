@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+﻿<?php
+require_once 'fonctions.php';
+
+?>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -23,9 +27,21 @@
                     </div>
                     <div class="modal-body">
                         <form action="#">
-                            <input type="radio" name="boisson" value="coca"> Coca<br>
-                            <input type="radio" name="boisson" value="sprite"> Sprite<br>
-                            <input type="radio" name="boisson" value="fanta"> Fanta<br>
+                            <?php
+                            $dbb = getConnection();
+                            $q = $dbb->prepare("SET NAMES utf8");
+                            $q->execute();
+                            $result = $dbb->prepare("SELECT * FROM nourriture WHERE categorie = 'Boisson'");
+                            $result->execute();
+                            while ($row = $result->fetchAll(PDO::FETCH_ASSOC)) {
+                                foreach ($row as $ligne) {
+                                    echo'<input type="radio" name="Boisson" value="' . $ligne["nomPlat"] . '">' . $ligne["nomPlat"] . '<br>';
+                                }
+                            }
+                            ?>
+
+
+
                             <input type="hidden" id="meal" name="repas" value=""/>
    <!--                          <input type="text" name="username" placeholder="Nom pour la commande"></input><br><br>
                            <p>Heure désirée</p>
@@ -57,11 +73,11 @@
                             </select>-->
                             <input type="submit" name="confirmer" class="btn" value="Confirmer"></input>
                         </form>
-                        <?php
-                        if (isset($_POST['confirmer'])) {
-                            
-                        }
-                        ?>
+<?php
+if (isset($_POST['confirmer'])) {
+    
+}
+?>
 
                     </div>
                     <div class="modal-footer" style="text-align: center;">
