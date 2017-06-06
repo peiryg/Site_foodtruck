@@ -4,6 +4,10 @@
 .body{
     margin-left:0px;
 }
+.col-md-5{
+    position:relative;
+    margin-left:100px;
+}
 .contenu{
     margin: auto;
     position: relative;
@@ -82,7 +86,11 @@ footer{
 .row-menu-wrap{
     display:block;
     margin-bottom: 35px;
+    width:62%;
 
+}
+.row-menu{
+    margin-bottom:-25px;
 }
 .category-item{
     width:80%;
@@ -112,9 +120,9 @@ footer{
 }
 .red-line{
     display:inline-block;
-    width:100%;
+    width:425px;
     height:1px;
-    margin-bottom:8px;
+    margin-bottom:0px;
     background-color:red;
 }
 .item-descr{
@@ -122,9 +130,28 @@ footer{
     font-family:'lato';
 }
 .btn{
-  float:right;
-  margin-top:-30px;
+    margin-left:350px;
+    margin-top:-50px;
 }
- .btn:hover{
+.btn:hover{
     opacity:0.7;
+}
+.panier{
+    position:relative;
+    width:30%;
+    height:auto;
+    min-height:300px;
+    float:right;
+    border:2px solid red;
+    padding:1%;
+    overflow: hidden;
+}
+.panier > h1{
+    text-align:center;
+}
+@media screen and (max-width: 1000px)
+{
+    .panier{
+        width:100%;
+    }
 }

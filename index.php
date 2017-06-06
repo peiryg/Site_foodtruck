@@ -2,32 +2,23 @@
 session_start();
 //session_destroy();
 require 'modal.php';
-  
+
 require_once 'fonctions.php';
 if (isset($_GET['Boisson'])) {
-  if(isset($_SESSION['commande'])){
-      $commande= $_SESSION['commande'];
-      $count =count($commande, COUNT_RECURSIVE)+1;
-      echo $count;
-  }
-  $commande['boisson'][$count] = $_GET['Boisson'];
-  $commande['repas'][$count] = ($_GET['repas']);
-  
-  
-  $_SESSION['commande'] = $commande;
-    // var_dump($commande);
-  echo $count;
-header('Location:redirectForCommandes.php');
-} else
-{
+    if (isset($_SESSION['commande'])) {
+        $commande = $_SESSION['commande'];
+        $count = count($commande, COUNT_RECURSIVE) + 1;
+        echo $count;
+    }
+    $commande['boisson'][$count] = $_GET['Boisson'];
+    $commande['repas'][$count] = ($_GET['repas']);
+    $_SESSION['commande'] = $commande;
+    echo "<script>window.location.href = 'redirectForCommandes.php';</script>";
+} else {
     $_GET['Boisson'] = "";
-    
-    
 }
- 
-    //echo $commande['boisson'][0];
-    
 
+//echo $commande['boisson'][0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,13 +47,9 @@ header('Location:redirectForCommandes.php');
                     modal.find('#meal').val(choice);
                 });
             });
-
-
-
         </script>
     </head>
     <body>
-
         <div class="header">          
             <img class="img_header" src="img/logo.png" alt=""/>              
         </div>
@@ -84,7 +71,6 @@ header('Location:redirectForCommandes.php');
                     while ($row = $result->fetchAll(PDO::FETCH_ASSOC)) {
                         foreach ($row as $ligne) {
                             ?>
-
                             <div class="row-menu-wrap">
                                 <div class="row-menu">
                                     <?php
@@ -99,19 +85,30 @@ header('Location:redirectForCommandes.php');
                         }
                     }
                     ?>
-
-
-
                 </div>
+                <div class="panier">
+                    <h1>Panier</h1><?php
+                    if (isset($_SESSION['commande'])) {
+                        echo $_SESSION['commande']['repas'][7];
+                        echo $_SESSION['commande']['boisson'][5];
+                    }
+                    echo "<form action='index.php' method='POST'>";
+                    echo'<input type="submit" name="clear" id="clear" value="Vider le panier"></input>';
+                    if (isset($_POST['clear'])) {
+                        unset($_SESSION['commande']);
+                        echo "<script>window.location.href = 'redirectForCommandes.php';</script>";
+                    }
+                    echo "</form>";
+                    ?></p>
+                </div>
+
             </div>
         </div>
-
     </div>
 </div>
 <footer>
     <div class="footer">
         <img class="img_footer" src="img/logo.png" alt=""/>
-        test
     </div>
 </footer>
 </body>
